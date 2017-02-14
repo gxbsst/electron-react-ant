@@ -1,14 +1,35 @@
 {
   "presets": [
-    ["env", { "targets": { "node": 6 }, "useBuiltIns": true }],
+    [
+      "env",
+      {
+        "targets": {
+          "node": 6
+        },
+        "useBuiltIns": true
+      }
+    ],
     "stage-0",
     "react"
   ],
-  "plugins": ["add-module-exports"],
+  "plugins": [
+    "add-module-exports",
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": true
+      }
+    ]
+  ],
   "env": {
     "production": {
-      "presets": ["react-optimize"],
-      "plugins": ["babel-plugin-dev-expression"]
+      "presets": [
+        "react-optimize"
+      ],
+      "plugins": [
+        "babel-plugin-dev-expression"
+      ]
     },
     "development": {
       "plugins": [
@@ -16,11 +37,19 @@
         "transform-es2015-classes",
         "tcomb"
       ],
-      "presets": ["react-hmre"]
+      "presets": [
+        "react-hmre"
+      ]
     },
     "test": {
       "plugins": [
-        ["webpack-loaders", { "config": "webpack.config.test.js", "verbose": false }]
+        [
+          "webpack-loaders",
+          {
+            "config": "webpack.config.test.js",
+            "verbose": false
+          }
+        ]
       ]
     }
   }

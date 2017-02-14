@@ -145,8 +145,11 @@
     "html-webpack-plugin": "^2.26.0",
     "jsdom": "^9.9.1",
     "json-loader": "^0.5.4",
+    "less": "^2.7.2",
+    "less-loader": "^2.2.3",
     "minimist": "^1.2.0",
     "mocha": "^3.2.0",
+    "portfinder": "^1.0.13",
     "react-addons-test-utils": "^15.4.2",
     "redux-logger": "^2.7.4",
     "sinon": "^1.17.7",
@@ -158,9 +161,12 @@
     "webpack-dev-middleware": "^1.9.0",
     "webpack-hot-middleware": "^2.15.0",
     "webpack-merge": "^2.4.0",
-    "webpack-validator": "^2.3.0"
+    "webpack-validator": "^2.3.0",
+    "ws": "^2.0.3"
   },
   "dependencies": {
+    "antd": "^2.7.1",
+    "babel-plugin-import": "^1.1.0",
     "electron-debug": "^1.1.0",
     "font-awesome": "^4.7.0",
     "react": "^15.4.2",
