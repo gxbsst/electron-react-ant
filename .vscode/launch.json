@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "program": "${workspaceRoot}/server.js",
+      "cwd": "${workspaceRoot}",
+      "env": {
+        "HOT": 1,
+        "NODE_ENV": "development"
+      },
+       "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+      "runtimeArgs": [
+        "--max_old_space_size=2096",
+        "-r",
+        "babel-register",
+        "${workspaceRoot}",
+        "--enable-logging",
+        "--remote-debugging-port=9222"
+      ],
+      "sourceMaps": true
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach to Process",
+      "port": 5858
+    }
+  ]
+}

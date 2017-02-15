@@ -32,29 +32,48 @@ export class SliderContent extends Component {
           theme="dark"
         >
           <SubMenu key="sub1" title={<span><Icon type="mail" /><span>基础资料设定</span></span>}>
-            <MenuItemGroup title="设备模块">
+            <MenuItemGroup title={<span><Icon type="user" /><span>设备模块</span></span>}>
               <Menu.Item key="1"> <Link to="/suppliers">供应商信息</Link></Menu.Item>
-              <Menu.Item key="2">工程师群组</Menu.Item>
-              <Menu.Item key="3">设备群组</Menu.Item>
+              <Menu.Item key="2"> <Link to="/">工程师群组</Link></Menu.Item>
+              <Menu.Item key="3"><Link to="counter">设备群组</Link></Menu.Item>
             </MenuItemGroup>
-            <MenuItemGroup title="品种">
-              <Menu.Item key="3"></Menu.Item>
-              <Menu.Item key="4"></Menu.Item>
+            <MenuItemGroup title="工位">
+              <Menu.Item key="4">工位</Menu.Item>
+            </MenuItemGroup>
+            <MenuItemGroup title="工艺路线">
+              <Menu.Item key="5">工艺路线</Menu.Item>
+            </MenuItemGroup>
+            <MenuItemGroup title="产品">
+              <Menu.Item key="6">产品</Menu.Item>
+            </MenuItemGroup>
+            <MenuItemGroup title="物料">
+              <Menu.Item key="7">物料</Menu.Item>
+            </MenuItemGroup>
+            <MenuItemGroup title="区域">
+              <Menu.Item key="8">区域</Menu.Item>
+            </MenuItemGroup>
+            <MenuItemGroup title="企业">
+              <Menu.Item key="9">工位</Menu.Item>
+            </MenuItemGroup>
+            <MenuItemGroup title="品质">
+              <Menu.Item key="10">品质</Menu.Item>
+            </MenuItemGroup>
+            <MenuItemGroup title="报表">
+              <Menu.Item key="11">报表</Menu.Item>
             </MenuItemGroup>
           </SubMenu>
-          <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>Navigation Two</span></span>}>
-            <Menu.Item key="5">Option 5</Menu.Item>
-            <Menu.Item key="6">Option 6</Menu.Item>
-            <SubMenu key="sub3" title="Submenu">
-              <Menu.Item key="7">Option 7</Menu.Item>
-              <Menu.Item key="8">Option 8</Menu.Item>
-            </SubMenu>
+          <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>应用程序</span></span>}>
+            <Menu.Item key="12">计划管理</Menu.Item>
+            <Menu.Item key="13">在制品管理</Menu.Item>
+            <Menu.Item key="14">工单管理</Menu.Item>
+            <Menu.Item key="15">库存管理</Menu.Item>
+            <Menu.Item key="16">设备状态</Menu.Item>
+            <Menu.Item key="17">品种分析</Menu.Item>
           </SubMenu>
-          <SubMenu key="sub4" title={<span><Icon type="setting" /><span>Navigation Three</span></span>}>
-            <Menu.Item key="9">Option 9</Menu.Item>
-            <Menu.Item key="10">Option 10</Menu.Item>
-            <Menu.Item key="11">Option 11</Menu.Item>
-            <Menu.Item key="12">Option 12</Menu.Item>
+          <SubMenu key="sub4" title={<span><Icon type="setting" /><span>系统管理</span></span>}>
+            <Menu.Item key="18">系统设定</Menu.Item>
+            <Menu.Item key="19">审核流程</Menu.Item>
+            <Menu.Item key="20">用户设定</Menu.Item>
           </SubMenu>
         </Menu>
       </div>
@@ -71,6 +90,12 @@ export default class App extends Component {
     this.state = {
       collapsed: false
     }
+  }
+
+  toggle = () => {
+    this.setState({
+      collapsed: !this.state.collapsed,
+    });
   }
 
   render() {
