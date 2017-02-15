@@ -11,14 +11,10 @@
         "HOT": 1,
         "NODE_ENV": "development"
       },
-       "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
       "runtimeArgs": [
         "--max_old_space_size=2096",
         "-r",
-        "babel-register",
-        "${workspaceRoot}",
-        "--enable-logging",
-        "--remote-debugging-port=9222"
+        "babel-register"
       ],
       "sourceMaps": true
     },
