@@ -30,14 +30,14 @@ const installExtensions = async () => {
       'REDUX_DEVTOOLS'
     ];
 
-    const forceDownload = !!process.env.UPGRADE_EXTENSIONS;
+    // const forceDownload = !!process.env.UPGRADE_EXTENSIONS;
 
     // TODO: Use async interation statement.
     //       Waiting on https://github.com/tc39/proposal-async-iteration
     //       Promises will fail silently, which isn't what we want in development
-    return Promise
-      .all(extensions.map(name => installer.default(installer[name], forceDownload)))
-      .catch(console.log);
+    // return Promise
+    //   .all(extensions.map(name => installer.default(installer[name], forceDownload)))
+    //   .catch(console.log);
   }
 };
 
