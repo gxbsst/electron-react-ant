@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import styles from './Home.css';
 import ReactDom from 'react-dom'
-import {TimePicker, DatePicker, message, Layout, Form, Icon, Input, Button, Checkbox} from 'antd'
+import { TimePicker, DatePicker, message, Layout, Form, Icon, Input, Button, Checkbox } from 'antd'
 const MonthPicker = DatePicker.MonthPicker;
 const RangePicker = DatePicker.RangePicker;
 const FormItem = Form.Item;
@@ -34,21 +34,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <Layout>
-          <Header>Header</Header>
-          <Layout>
-
-            <Content>
-              <div style={{ width: 400, margin: '100px auto' }}>
-                <DatePicker onChange={value => this.handleChange(value)} />
-                <div style={{ marginTop: 20 }}>当前日期：{this.state.date.toString()}</div>
-              </div>
-              <NormalLoginForm />
-            </Content>
-          </Layout>
-          <Footer>Footer</Footer>
-        </Layout>
-
+        Home
       </div>
     );
   }
