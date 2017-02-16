@@ -29,7 +29,6 @@ export class SliderContent extends Component {
           defaultOpenKeys={['sub1']}
           selectedKeys={[this.state.current]}
           mode="inline"
-          theme="dark"
         >
           <SubMenu key="sub1" title={<span><Icon type="mail" /><span>基础资料设定</span></span>}>
             <MenuItemGroup title={<span><Icon type="user" /><span>设备模块</span></span>}>
@@ -107,7 +106,9 @@ export default class App extends Component {
             collapsible
             collapsed={this.state.collapsed}
           >
-            <div className="logo" />
+            <div className="logo">
+              <img src="assets/images/vt-ims.png" alt="" />
+            </div>
             <SliderContent />
           </Sider>
           <Layout>
@@ -121,10 +122,13 @@ export default class App extends Component {
             <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
               {this.props.children}
             </Content>
+
           </Layout>
         </Layout>
 
-
+        <Footer>
+          ©2017 上海文什数据科技有限公司
+        </Footer>
       </div>
     );
   }

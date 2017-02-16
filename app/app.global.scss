@@ -1,0 +1,22 @@
+@import "~antd/dist/antd.css";
+/*@import "/Users/weston/Projects/electron-react-boilerplate/node_modules/antd/dist/antd.css"*/
+
+.logo {
+  background: #FFF;
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.actions {
+  padding: 10px;
+  text-align: right;
+  button {
+    margin: 0 15px;
+  }
+}
+
+.ant-layout-footer {
+  text-align: center
+}
